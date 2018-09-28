@@ -3,12 +3,12 @@ package com.zhou.fly;
 import java.util.Random;
 
 /**
- * �зɻ�: �Ƿ����Ҳ�ǵ���
+ * 敌机类
  */
 public class Airplane extends FlyingObject implements Enemy {
-	private int speed = 4;  //�ƶ�����
+	private int speed = 4;
 	
-	/** ��ʼ�����? */
+
 	public Airplane(){
 		this.image = ShootGame.airplane;
 		width = image.getWidth();
@@ -18,19 +18,19 @@ public class Airplane extends FlyingObject implements Enemy {
 		x = rand.nextInt(ShootGame.WIDTH - width);
 	}
 	
-	/** ��ȡ���� */
+
 	@Override
 	public int getScore() {  
 		return 5;
 	}
 
-	/** //Խ�紦�� */
+
 	@Override
 	public 	boolean outOfBounds() {   
 		return y>ShootGame.HEIGHT;
 	}
 
-	/** �ƶ� */
+
 	@Override
 	public void step() {   
 		y += speed;
